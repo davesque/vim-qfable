@@ -48,6 +48,7 @@ function! s:AddToQf()
     copen
     call add(qflist, loc)
     call setqflist(qflist, 'r')
+    clast
   endif
 endfunction
 
