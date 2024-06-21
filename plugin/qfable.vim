@@ -44,12 +44,10 @@ function! s:AddToQf()
   let loc['text'] = text
 
   let qflist = getqflist()
-  if index(qflist, loc) == -1
-    copen
-    call add(qflist, loc)
-    call setqflist(qflist, 'r')
-    clast
-  endif
+  copen
+  call add(qflist, loc)
+  call setqflist(qflist, 'r')
+  clast
 endfunction
 
 nnoremap <silent> <Plug>(qfable-addtoqf) :<C-U>call <SID>AddToQf()<CR>
